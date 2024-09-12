@@ -1,0 +1,51 @@
+# config.yaml
+
+data_sources:
+  satellite:
+    endpoint: "https://satellite-data-provider.example.com/api"
+    api_key: "YOUR_SATELLITE_API_KEY"
+    update_interval: 3600  # in seconds
+  ground_station:
+    endpoint: "https://ground-station-provider.example.com/api"
+    api_key: "YOUR_GROUND_STATION_API_KEY"
+    update_interval: 600  # in seconds
+  meteorological:
+    endpoint: "https://meteorological-data-provider.example.com/api"
+    api_key: "YOUR_METEOROLOGICAL_API_KEY"
+    update_interval: 1800  # in seconds
+  resource_management:
+    endpoint: "https://resource-management-provider.example.com/api"
+    api_key: "YOUR_RESOURCE_API_KEY"
+  field_reports:
+    endpoint: "https://field-report-provider.example.com/api"
+    api_key: "YOUR_FIELD_REPORT_API_KEY"
+  drone_data:
+    endpoint: "https://drone-data-provider.example.com/api"
+    api_key: "YOUR_DRONE_API_KEY"
+    update_interval: 300  # in seconds
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "your_db_user"
+  password: "your_db_password"
+  database: "wildfire_db"
+
+kafka:
+  bootstrap_servers: "localhost:9092"
+  topic: "wildfire-data"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/app.log"
+
+api:
+  port: 5000
+  host: "0.0.0.0"
+
+processing:
+  anomaly_detection:
+    threshold: 100  # Example threshold for detecting anomalies
+  normalization:
+    unit: "metric"  # Units for normalization, e.g., metric or imperial

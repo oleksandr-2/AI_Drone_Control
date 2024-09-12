@@ -1,0 +1,12 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Agent_drone",
+        "-p",
+        "*_test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "cmake.sourceDirectory": "C:/ProgramVC/Enhanced AI-Driven Drone System for Comprehensive Wildfire Management/Cop.v2/Agent_drone/newenv/Lib/site-packages/tensorflow/xla_aot_runtime_src"
+}
